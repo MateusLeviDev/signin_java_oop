@@ -1,5 +1,7 @@
-/*Mostrar um menu para um usuário escolher uma opção.  
- **/
+/* 
+ * 
+ * @Author: MateusLeviDev
+ * */ 
 
 package signin_java_oop;
 
@@ -13,7 +15,10 @@ public class Main {
 		//options
 		
 		String nome, cpf;
-		int opc;
+		int opc, gradesQtd;
+		sala novaSala = new sala();
+		aluno novoAluno = new aluno(); //objeto do tipo aluno
+		float grade = 0;
 		
 		do {
 			System.out.println("\n---------------");
@@ -31,15 +36,33 @@ public class Main {
 				
 				System.out.print("Nome");
 				sc.nextLine();
+				
 				nome = sc.nextLine();
+				
 				System.out.println("CPF");
 				cpf = sc.nextLine();
+				
+				novoAluno = new aluno(nome, cpf);
+				
+				//loop para número indefinido de notas. Arbitrária
+				System.out.println("Número de notas: ");
+				gradesQtd = sc.nextInt();
+				for (int i = 0; i < gradesQtd; i++) {
+					System.out.println("Nota: " + (i + 1));
+					grade = sc.nextFloat();
+					novoAluno.insereNotas(grade);
+				} 
+				
+				novaSala.insereAluno(novoAluno);
+				
 				break;
 				
 			case 2: //menu options
+				novaSala.listarAlunos();;
 				break;
 				
 			case 3: 
+				novaSala.listarSituacao();;
 				break;
 				
 			case 0: 
