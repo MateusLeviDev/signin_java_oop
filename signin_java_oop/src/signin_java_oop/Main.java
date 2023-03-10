@@ -1,7 +1,7 @@
 /* 
  * 
  * @Author: MateusLeviDev
- * */ 
+ * */
 
 package signin_java_oop;
 
@@ -48,7 +48,7 @@ public class Main {
 				System.out.println("Número de notas: ");
 				gradesQtd = sc.nextInt();
 				for (int i = 0; i < gradesQtd; i++) {
-					System.out.println("Nota: " + (i + 1));
+					System.out.println("Nota: [0 a 100]" + (i + 1));
 					grade = sc.nextFloat();
 					novoAluno.insereNotas(grade);
 				} 
