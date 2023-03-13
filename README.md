@@ -3,7 +3,7 @@ Developing my expertise in OOP studies. Also, a material for an academic case
 
 > Java, OOP.
 
-### `Initial concepts`
+### `Initial Concepts`
 - Implementando uma ArrayList das `grades` [Main.java - Case 1], para armazenar todas as notas. 
 - Criando um constructor using fields. Para instanciar um objeto da classe `aluno`.
 - Em seguida aplicando os conceitos de `encapsulamento`, em virtude das var serem privadas, devemos criar os `getters and setters`. 
